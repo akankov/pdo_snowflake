@@ -291,7 +291,7 @@ Specify the data source name (:code:`dsn`) parameter as shown below:
 
 .. code-block:: php
 
-    $dbh = new PDO("snowflake:account=<account_name>", "<user>", "<password>");
+    $dbh = new PDO("snowflake:<account_name>", "<user>", "<password>");
 
 where:
 
@@ -312,8 +312,8 @@ where:
 
 .. code-block:: php
 
-    $dbh = new PDO("snowflake:account=testaccount.us-east-2.aws", "user", "password");
-    $dbh = new PDO("snowflake:account=testaccount;region=us-east-2.aws", "user", "password");
+    $dbh = new PDO("snowflake:testaccount.us-east-2.aws", "user", "password");
+    $dbh = new PDO("snowflake:testaccount;region=us-east-2.aws", "user", "password");
 
 You can specify the host name for your account directly as shown below instead of using `account` and `region`:
 
@@ -343,7 +343,7 @@ Specify the data source name (:code:`dsn`) parameter as shown below:
 
 .. code-block:: php
 
-    $dbh = new PDO("account=<account name>;authenticator=SNOWFLAKE_JWT;priv_key_file=<path>/rsa_key.p8;priv_key_file_pwd=<private_key_passphrase>", 
+    $dbh = new PDO("snowflake:account=<account name>;authenticator=SNOWFLAKE_JWT;priv_key_file=<path>/rsa_key.p8;priv_key_file_pwd=<private_key_passphrase>", 
                     "<username>", "");
 
 where:
